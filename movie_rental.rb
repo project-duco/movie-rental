@@ -42,6 +42,7 @@
 
 
 class Movie
+
   @@price_codes = {CHILDRENS: {base: 1.5, discount_price: 1.5, included_days: 3},
                    NEW_RELEASE: {base: 3, discount_price: nil, included_days: nil},
                    REGULAR: {base: 2, discount_price: 1.5, included_days: 2,},
@@ -67,11 +68,13 @@ class Movie
 end
 
 class Rental
+
   attr_accessor :days_rented, :movie
   def initialize(movie, days_rented)
     @movie = movie
     @days_rented = days_rented
   end
+
 end
 
 class Customer
